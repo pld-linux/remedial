@@ -1,12 +1,12 @@
 Summary:	Remedial AVI player
 Summary(pl):	Remedial - odtwarzacz plików AVI
 Name:		remedial
-Version:	0.2.17
+Version:	0.2.22
 Release:	1
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://access.zonnet.nl/pbd/remedial/src/%{name}-%{version}.tar.gz
-# Source0-md5:	ab2587471a728a9b2959e0e902f77e40
+# Source0-md5:	d497c1a38888f927e28903e38a8095d6
 URL:		http://leapster.org/remedial/
 BuildRequires:	autoconf
 BuildRequires:	automake
