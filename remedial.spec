@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://access.zonnet.nl/pbd/remedial/src/%{name}-%{version}.tar.gz
+# Source0-md5:	c557a05d9811fde799eb36a5e5d4c715
 URL:		http://leapster.org/remedial/
 BuildRequires:	autoconf
 BuildRequires:	automake
