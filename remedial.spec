@@ -40,7 +40,7 @@ Remedial to frontend do bibliotek avifile.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT 
+	DESTDIR=$RPM_BUILD_ROOT
 
 # useless - *.so are dlopened
 rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
