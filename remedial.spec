@@ -13,6 +13,8 @@ BuildRequires:	automake
 BuildRequires:	avifile-devel
 BuildRequires:	expat-devel
 BuildRequires:	libao-devel
+BuildRequires:	libtool
+BuildRequires:	libvorbis-devel
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,7 +28,7 @@ Remedial to frontend do bibliotek avifile.
 %setup -q
 
 %build
-#CFLAGS="%{rpmcflags}"; export CFLAGS
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -36,7 +38,12 @@ Remedial to frontend do bibliotek avifile.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT 
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT 
+
+# useless - *.so are dlopened
+rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,8 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS BUGS README
-%dir %{_libdir}/%{name}
 %attr(755,root,root) %{_bindir}/remedial
-%{_libdir}/%{name}/*
+%dir %{_libdir}/%{name}
+%attr(755,root,root) %{_libdir}/%{name}/*.so
 %{_sysconfdir}/remedial.xml
 %{_mandir}/man1/remedial.1*
