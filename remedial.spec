@@ -1,8 +1,8 @@
 Summary:	Remedial AVI player
 Summary(pl):	Remedial - odtwarzacz plików AVI
 Name:		remedial
-Version:	0.2.11
-Release:	0.1
+Version:	0.2.13
+Release:	1
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://access.zonnet.nl/pbd/remedial/src/%{name}-%{version}.tar.gz
@@ -36,8 +36,9 @@ Remedial to frontend do bibliotek avifile.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	prefix=$RPM_BUILD_ROOT%{_prefix} \
-	mandir=$RPM_BUILD_ROOT%{_mandir}
+	DESTDIR=$RPM_BUILD_ROOT \
+	prefix=%{_prefix} \
+	mandir=%{_mandir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,5 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS BUGS README
 %attr(755,root,root) %{_bindir}/remedial
 # FIXME: wrong path
-#%{_prefix}%{_sysconfdir}/remedial.xml
+%{_sysconfdir}/remedial.xml
 %{_mandir}/man1/remedial.1*
