@@ -1,5 +1,5 @@
 Summary:	Remedial AVI player
-Summary(pl.UTF-8):   Remedial - odtwarzacz plików AVI
+Summary(pl.UTF-8):	Remedial - odtwarzacz plików AVI
 Name:		remedial
 Version:	0.2.22
 Release:	1
