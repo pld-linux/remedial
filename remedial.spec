@@ -1,5 +1,5 @@
 Summary:	Remedial AVI player
-Summary(pl):	Remedial - odtwarzacz plików AVI
+Summary(pl.UTF-8):   Remedial - odtwarzacz plikÃ³w AVI
 Name:		remedial
 Version:	0.2.22
 Release:	1
@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Remedial is a front-end for the avifile libraries.
 
-%description -l pl
+%description -l pl.UTF-8
 Remedial to frontend do bibliotek avifile.
 
 %prep
